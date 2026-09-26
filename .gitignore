@@ -1,0 +1,8 @@
+# Dependencies installed by the Cloud Agent environment (serve, decap-server)
+node_modules/
+
+# Decap CMS local backend metadata
+.decap-server/
+
+# OS / editor cruft
+.DS_Store

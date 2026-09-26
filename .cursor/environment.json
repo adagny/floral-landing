@@ -1,0 +1,20 @@
+{
+  "name": "Creaciones Florales Flora",
+  "install": "npm install --no-save --no-audit --no-fund serve decap-server",
+  "terminals": [
+    {
+      "name": "site",
+      "command": "npx serve -l 4173 .",
+      "description": "Static landing page served at http://localhost:4173 (open /index.html)."
+    },
+    {
+      "name": "cms",
+      "command": "npx decap-server",
+      "description": "Decap CMS local backend proxy on http://localhost:8081, used by /admin for local editing without login."
+    }
+  ],
+  "ports": [
+    { "name": "site", "port": 4173 },
+    { "name": "decap-cms", "port": 8081 }
+  ]
+}
