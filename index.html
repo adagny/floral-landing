@@ -645,5 +645,23 @@
         .catch(function () { applyContent(DEFAULT_CONTENT); });
     })();
   </script>
+
+  <!-- ============ NETLIFY IDENTITY ============ -->
+  <!-- Gestiona el login del panel /admin (Netlify Identity + Git Gateway).
+       Al aceptar una invitación por correo, el enlace abre esta página con un
+       token; el widget muestra el formulario y, tras iniciar sesión, redirige
+       automáticamente al panel /admin. -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', function (user) {
+        if (!user) {
+          window.netlifyIdentity.on('login', function () {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>

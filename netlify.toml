@@ -1,0 +1,9 @@
+# Configuración de despliegue en Netlify.
+# El sitio es estático (sin paso de compilación): se publica la raíz del repo.
+[build]
+  publish = "."
+  command = ""
+
+# El panel /admin necesita que /admin/index.html se sirva en esa ruta.
+# Netlify ya lo hace por defecto para archivos estáticos; no se añaden
+# redirecciones para no interferir con el flujo de Netlify Identity.

@@ -2,11 +2,12 @@
 # Documentación: https://decapcms.org/docs/
 
 # ── Backend (dónde se guardan los cambios) ──────────────────────────────
-# Producción: guarda los cambios como commits en el repositorio de GitHub.
+# Producción (Netlify): Netlify Identity + Git Gateway autentican al usuario
+# y guardan los cambios como commits en el repositorio de GitHub, sin exponer
+# tokens ni necesitar una OAuth App propia.
 backend:
-  name: github
-  repo: adagny/floral-landing              # usuario/repositorio en GitHub
-  branch: main                             # rama donde se guardan los cambios
+  name: git-gateway
+  branch: master                           # rama donde se guardan los cambios (rama por defecto del repo)
 
 # Permite EDITAR EN LOCAL sin autenticación usando un servidor de prueba:
 #   1) npx decap-server         (deja esta terminal abierta)
