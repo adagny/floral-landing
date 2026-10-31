@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>Panel de administración · Creaciones Florales Flora</title>
+
+  <!-- Indica a Decap CMS exactamente dónde está la configuración.
+       Evita el error "Failed to load config.yml (404)" cuando se entra a
+       /admin sin la barra final (la ruta relativa se resolvería como
+       /config.yml). La ruta absoluta funciona en hosting en la raíz
+       (Netlify, túnel de pruebas). -->
+  <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
 </head>
 <body>
   <!-- Decap CMS (antes Netlify CMS) -->
